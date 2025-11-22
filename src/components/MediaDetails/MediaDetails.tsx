@@ -1,6 +1,3 @@
-
-
-
 import Image from "next/image";
 import { Rating, Typography } from "@mui/material";
 import { CrewMember } from "@/type/CreditsType";
@@ -9,7 +6,7 @@ interface TvShowHeaderProps {
   movie: Media;
   genreNames: string;
   featuredCrew: CrewMember[];
-  handleOpenModal: (image: string) => void;
+  // handleOpenModal: (image: string) => void;
 }
 
 interface Media {
@@ -22,9 +19,6 @@ interface Media {
   vote_count: number;
   vote_average: number;
 }
-
-
-
 
 const MediaDetails = ({
   movie,
@@ -58,7 +52,7 @@ const MediaDetails = ({
             width={450}
             height={400}
             src={imageUrl}
-            alt={movie.title??""}
+            alt={movie.title ?? ""}
           />
         </div>
         <div className="self-end">
@@ -104,18 +98,20 @@ const MediaDetails = ({
               </p>
               <div className="md:flex gap-6 justify-start">
                 {featuredCrew && featuredCrew.length > 0 ? (
-                  featuredCrew.slice(0, 4).map((member: CrewMember, index: number) => (
-                    <div key={index} className="">
-                      <div className="">
-                        <p className="text-white text-center text-[14px]">
-                          {member.name}
-                        </p>
-                        <p className="text-gray-400 text-center text-[12px]">
-                          {member.job}
-                        </p>
+                  featuredCrew
+                    .slice(0, 4)
+                    .map((member: CrewMember, index: number) => (
+                      <div key={index} className="">
+                        <div className="">
+                          <p className="text-white text-center text-[14px]">
+                            {member.name}
+                          </p>
+                          <p className="text-gray-400 text-center text-[12px]">
+                            {member.job}
+                          </p>
+                        </div>
                       </div>
-                    </div>
-                  ))
+                    ))
                 ) : (
                   <p>No Featured Crew Information Available</p>
                 )}

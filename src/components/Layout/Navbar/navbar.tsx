@@ -1,4 +1,4 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
+
 "use client";
 import SearchBox from "@/components/Searchbox/searchbox";
 
@@ -7,15 +7,11 @@ import { useState } from "react";
 
 const NavbarComponent = () => {
   /* Create A State To Handle Response */
-  const [currentPath, setCurrentPath] = useState<string>("");
-  const [dropdownOpen, setDropdownOpen] = useState<boolean>(false);
+  const [] = useState<string>("");
+  const [] = useState<boolean>(false);
 
   /* Now Create A Funtion To Handle On Click */
 
-  const handleLinkClick = (url: string) => {
-    setCurrentPath(url);
-    setDropdownOpen(false);
-  };
 
   return (
     <>
