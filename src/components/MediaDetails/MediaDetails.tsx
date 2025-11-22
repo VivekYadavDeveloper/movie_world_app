@@ -1,15 +1,30 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
+
 
 
 import Image from "next/image";
 import { Rating, Typography } from "@mui/material";
+import { CrewMember } from "@/type/CreditsType";
 
 interface TvShowHeaderProps {
-  movie: any;
+  movie: Media;
   genreNames: string;
-  featuredCrew: any[];
+  featuredCrew: CrewMember[];
   handleOpenModal: (image: string) => void;
 }
+
+interface Media {
+  id: number;
+  title?: string;
+  name?: string;
+  overview: string;
+  poster_path: string | null;
+  backdrop_path: string | null;
+  vote_count: number;
+  vote_average: number;
+}
+
+
+
 
 const MediaDetails = ({
   movie,
@@ -33,7 +48,7 @@ const MediaDetails = ({
         height={800}
         className="object-top lg:max-h-[65vh] max-h-screen w-full object-cover rounded-2xl"
         src={backDropImg}
-        alt={movie.title}
+        alt={movie.title ?? ""}
       />
       <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent rounded-2xl"></div>
       <div className="absolute bottom-10 left-10 flex lg:gap-16 sm:gap-8 gap-4">
@@ -43,7 +58,7 @@ const MediaDetails = ({
             width={450}
             height={400}
             src={imageUrl}
-            alt={movie.title}
+            alt={movie.title??""}
           />
         </div>
         <div className="self-end">
@@ -89,7 +104,7 @@ const MediaDetails = ({
               </p>
               <div className="md:flex gap-6 justify-start">
                 {featuredCrew && featuredCrew.length > 0 ? (
-                  featuredCrew.slice(0, 4).map((member: any, index: number) => (
+                  featuredCrew.slice(0, 4).map((member: CrewMember, index: number) => (
                     <div key={index} className="">
                       <div className="">
                         <p className="text-white text-center text-[14px]">
