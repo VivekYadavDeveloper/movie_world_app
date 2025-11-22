@@ -5,7 +5,7 @@ import React from "react";
 import CardContainer from "@/components/CardGroup/CardContainer/CardContainer";
 import SliderContainer from "@/components/Slider/SliderContainer/SliderContainer";
 import MainContext from "@/context/MasterContext";
-import Banner from "@/components/BannerSection/banner/Banner";
+import Banner from "@/components/Bannersection/banner/Banner";
 
 
 export default function Home() {
