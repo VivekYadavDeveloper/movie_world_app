@@ -6,7 +6,7 @@ interface TvShowHeaderProps {
   movie: Media;
   genreNames: string;
   featuredCrew: CrewMember[];
-  // handleOpenModal: (image: string) => void;
+  handleOpenModal: (image: string) => void;
 }
 
 interface Media {
@@ -24,6 +24,7 @@ const MediaDetails = ({
   movie,
   genreNames,
   featuredCrew,
+  handleOpenModal,
 }: TvShowHeaderProps) => {
   const imageUrl =
     movie && movie.poster_path
@@ -52,6 +53,7 @@ const MediaDetails = ({
             width={450}
             height={400}
             src={imageUrl}
+            onClick={() => handleOpenModal(imageUrl)}
             alt={movie.title ?? ""}
           />
         </div>

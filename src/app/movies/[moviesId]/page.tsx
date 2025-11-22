@@ -1,5 +1,4 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-/* eslint-disable @typescript-eslint/no-explicit-any */
+
 "use client";
 import Castings from "@/components/Casting/Casting";
 import MediaDetails from "@/components/MediaDetails/MediaDetails";
@@ -29,15 +28,7 @@ const DetailedMoviePage = () => {
   const lastPartOfPath = pathname?.split("/movies/")[1];
   const numericMovieId = Number(lastPartOfPath);
 
-  const imageUrl =
-    movie && movie.poster_path
-      ? `https://image.tmdb.org/t/p/w1280${movie.poster_path}`
-      : "noImage";
 
-  const backDropImg =
-    movie && movie.backdrop_path
-      ? `https://image.tmdb.org/t/p/w1280${movie.backdrop_path}`
-      : "noBanner";
   /* Fetch Movie Details */
 
   useEffect(() => {
@@ -127,9 +118,6 @@ const DetailedMoviePage = () => {
     : '';
 
   // Filter out crew members who are not involved in Acting
-  const featuredCrew = credits?.crew.filter((member: any) =>
-    ["Director", "Producer", "Screenplay", "Writer"].includes(member.job)
-  );
 
   const handleOpenModal = (image: string) => {
     setSelectedImage(image);
