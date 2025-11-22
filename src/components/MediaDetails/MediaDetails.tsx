@@ -1,4 +1,4 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
+
 
 import Image from "next/image";
 import { Rating, Typography } from "@mui/material";

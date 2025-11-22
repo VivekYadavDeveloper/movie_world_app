@@ -1,10 +1,11 @@
 "use client";
 
 import React from "react";
-import Banner from "@/components/Bannersection/Banner/Banner";
+
 import CardContainer from "@/components/CardGroup/CardContainer/CardContainer";
 import SliderContainer from "@/components/Slider/SliderContainer/SliderContainer";
 import MainContext from "@/context/MasterContext";
+import Banner from "@/components/BannerSection/Banner/Banner";
 
 export default function Home() {
   return (
