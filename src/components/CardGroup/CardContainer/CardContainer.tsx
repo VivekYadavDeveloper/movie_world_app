@@ -1,3 +1,4 @@
+
 import { MasterContext } from "@/context/MasterContext";
 import React, { useContext, useEffect } from "react";
 import MovieCard from "../CardDetails/MovieCard/MovieCard";
@@ -16,9 +17,9 @@ const CardContainer: React.FC<CardGroupProps> = ({
 
   useEffect(() => {
     setMovieOrTV(streamingType);
+    setTrendingOption(activeTab);
   }, [setMovieOrTV, setTrendingOption, streamingType]);
 
-  setTrendingOption(activeTab);
 
   return (
     <>

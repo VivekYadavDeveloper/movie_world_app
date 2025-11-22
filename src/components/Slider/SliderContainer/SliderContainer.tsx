@@ -1,6 +1,4 @@
 import React, { useContext } from "react";
-import Image from "next/image";
-import { Movie } from "@/type/MovieType";
 import { MasterContext } from "@/context/MasterContext";
 import SingleSlider from "../SingleSlider/SingleSlider";
 const SliderContainer = () => {
