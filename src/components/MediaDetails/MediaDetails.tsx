@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 
 
 import Image from "next/image";
@@ -14,7 +15,6 @@ const MediaDetails = ({
   movie,
   genreNames,
   featuredCrew,
-  handleOpenModal,
 }: TvShowHeaderProps) => {
   const imageUrl =
     movie && movie.poster_path

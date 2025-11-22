@@ -18,7 +18,7 @@ const CardContainer: React.FC<CardGroupProps> = ({
   useEffect(() => {
     setMovieOrTV(streamingType);
     setTrendingOption(activeTab);
-  }, [setMovieOrTV, setTrendingOption, streamingType]);
+  }, [activeTab, setMovieOrTV, setTrendingOption, streamingType]);
 
 
   return (
