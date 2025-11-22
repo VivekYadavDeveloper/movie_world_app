@@ -1,9 +1,10 @@
 "use client";
 
 import React, { useContext, useEffect, useState } from "react";
-import BannerSingle from "../BannerSingle/banner_singles";
+
 import { MasterContext } from "@/context/MasterContext";
 import "./Banner.css";
+import BannerSingle from "../BannerSingle/banner_singles";
 
 const Banner = () => {
   const { movies } = useContext(MasterContext);
